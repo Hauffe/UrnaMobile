@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cédula eleitoral"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold|italic"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/nameCandidato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:fontFamily="serif-monospace"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/img_candidato"
+            android:layout_width="match_parent"
+            android:layout_height="184dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/candidato_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Candidato 1"
+                android:onClick="onRadioButtonClicked"
+                android:padding="10dp"/>
+
+            <RadioButton
+                android:id="@+id/candidato_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Candidato 2"
+                android:onClick="onRadioButtonClicked"
+                android:padding="10dp"/>
+
+            <RadioButton
+                android:id="@+id/candidato_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Candidato 3"
+                android:onClick="onRadioButtonClicked"
+                android:padding="10dp"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VOTAR"
+                android:layout_gravity="center"
+                android:onClick="btnVoteOnClick"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="btnNullOnClick"
+                android:text="NULO" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="btnCandidatesOnClick"
+                android:text="CANDIDATOS" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
